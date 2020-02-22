@@ -1,88 +1,87 @@
-![Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
+Microsoft Defending Democracy Program: ElectionGuard](images/electionguard-banner.svg)
 
 # 🗳 ElectionGuard
 
-[![license](https://img.shields.io/github/license/microsoft/electionguard)](License)
+[![licencia](https://img.shields.io/github/license/microsoft/electionguard)](Licencia)
 
-ElectionGuard is an open source software development kit (SDK) that makes voting more secure, transparent and accessible. The ElectionGuard SDK leverages [homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption) to ensure that votes recorded by electronic systems of any type remain encrypted, secure, and secret. Meanwhile, ElectionGuard also allows verifiable and accurate tallying of ballots by any 3rd party organization without compromising secrecy or security. 
+ElectionGuard es un kit de desarrollo de software de código abierto (SDK) que hace que la votación sea más segura, transparente y accesible. El SDK de ElectionGuard aprovecha [la encriptación homomórfica](https://en.wikipedia.org/wiki/Homomorphic_encryption) para asegurar que los votos registrados por sistemas electrónicos de cualquier tipo permanezcan encriptados, seguros y secretos. Mientras tanto, ElectionGuard también permite el recuento verificable y preciso de los votos por cualquier organización de terceros sin comprometer el secreto o la seguridad. 
 
-Announced on May 6th at the Build developer conference, ElectionGuard will enable end-to-end verification of elections as well as support the publication of results from ballot comparison audits.  Results can be published online or made available to third-party organizations for secure validation, and allow individual voters to confirm their votes were correctly counted. 
+Anunciado el 6 de mayo en la conferencia de desarrolladores del edificio, ElectionGuard permitirá la verificación de extremo a extremo de las elecciones, así como apoyar la publicación de los resultados de las auditorías de comparación de las boletas.  Los resultados pueden ser publicados en línea o puestos a disposición de organizaciones de terceros para su validación segura, y permiten a los votantes individuales confirmar que sus votos fueron contados correctamente. 
  
-Read more in [the announcement blog post](https://blogs.microsoft.com/on-the-issues/?p=63211). 
+Más información en [la entrada del blog del anuncio](https://blogs.microsoft.com/on-the-issues/?p=63211). 
 
-## Open-Source
-This library and all linked ElectionGuard projects, are licensed under the MIT license. There is no fee for using ElectionGuard.
+## Código Abierto
+Esta biblioteca y todos los proyectos vinculados a ElectionGuard, están licenciados bajo la licencia del MIT. No hay ningún cargo por el uso de ElectionGuard.
 
 ## Core Component
-This is the core SDK that performs election functions such as vote encryption, decryption, key generation, and tallying. This code is meant to be run on voting system hardware and to be integrated into existing (or new) voting system software. The ElectionGuard SDK is meant to add end-to-end verifiability and encryption into 3rd party comprehensive voting systems. There are provided simplistic, proof-of-concept applications to understand how each implementation of the API should be called. Currently, there are two available implementations.
+Este es el núcleo del SDK que realiza funciones electorales como la encriptación de los votos, la desencriptación, la generación de claves y el recuento. Este código está pensado para ser ejecutado en el hardware del sistema de votación y para ser integrado en el software del sistema de votación existente (o nuevo). El SDK de ElectionGuard está destinado a añadir verificación y cifrado de extremo a extremo en sistemas de votación integrales de terceros. Se proporcionan aplicaciones simplificadas de prueba de concepto para comprender cómo debe llamarse cada implementación de la API. Actualmente, hay dos implementaciones disponibles.
 
 ### C
 
-[📁 Source](https://github.com/microsoft/electionguard-c) - https://github.com/microsoft/electionguard-c
+[📁 Fuente](https://github.com/microsoft/electionguard-c) - https://github.com/microsoft/electionguard-c
 
 ### C#
-[📁 Source](https://github.com/microsoft/electionguard-dotnet) - https://github.com/microsoft/electionguard-dotnet
+[📁 Fuente](https://github.com/microsoft/electionguard-dotnet) - https://github.com/microsoft/electionguard-dotnet
 
-[📦 Package - ElectionGuard.SDK](https://www.nuget.org/packages/ElectionGuard.SDK)
+[📦 Paquete - ElectionGuard.SDK](https://www.nuget.org/packages/ElectionGuard.SDK)
 
 
-## Specifications & Documentation
-This library contains the fundamental specifications, documentation, architecture, and mathematical/cryptographic proofs that underpin ElectionGuard. If you're looking to understand the system better, or want to know how to integrate the various components, there is a lot of valuable information contained here.
+## Especificaciones y documentación
+Esta biblioteca contiene las especificaciones fundamentales, la documentación, la arquitectura y las pruebas matemáticas y criptográficas que sustentan a ElectionGuard. Si está buscando entender mejor el sistema, o quiere saber cómo integrar los diversos componentes, hay mucha información valiosa contenida aquí.
 
-[📄 Documentation and Specifications](https://github.com/microsoft/electionguard/wiki)
+[📄 Documentación y especificaciones](https://github.com/microsoft/electionguard/wiki)
 
 ## Reference Implementation
-The remainder of the ElectionGuard SDK consists of a reference implementation split over several separate repositories. These repos, although intended to be used together as components of a broader solution, can also stand alone if developers wish to only research or implement one component.
+El resto del SDK de ElectionGuard consiste en una implementación de referencia dividida en varios repositorios separados. Estos repositorios, aunque están pensados para ser utilizados conjuntamente como componentes de una solución más amplia, también pueden ser independientes si los desarrolladores sólo desean investigar o implementar un componente.
 
-### Admin Device
-This is an application used to administer ElectionGuard election processes, including key generation, trustee provisioning, and post-election tallying, partial decryptions, and zero-knowledge proofs.
+### Dispositivo de administración
+Se trata de una aplicación que se utiliza para administrar los procesos electorales de ElectionGuard, incluida la generación de claves, el aprovisionamiento de fideicomisarios y el recuento posterior a las elecciones, los desciframientos parciales y las pruebas de conocimiento cero.
 
-[📁 Source](https://github.com/microsoft/electionguard-admin-device) - https://github.com/microsoft/electionguard-admin-device
+[📁 Fuente](https://github.com/microsoft/electionguard-admin-device) - https://github.com/microsoft/electionguard-admin-device
 
 ### Ballot Box
-This library is used to scan ballots to generate lists of cast and spoiled ballots in an election; used in tallying to finalize ballot operations (cast or spoil, etc.) for publishing results.
+Esta biblioteca se utiliza para escanear las boletas para generar listas de boletas emitidas y estropeadas en una elección; se utiliza en el recuento para finalizar las operaciones de las boletas (emitidas o estropeadas, etc.) para la publicación de los resultados.
 
-[📁 Source](https://github.com/microsoft/electionguard-ballot-box) - https://github.com/microsoft/electionguard-ballot-box
+[📁 Fuente](https://github.com/microsoft/electionguard-ballot-box) - https://github.com/microsoft/electionguard-ballot-box
 
 
 ### Ballot Marking Device
-This contains a working instance of ballot marking device (BMD). Built by VotingWorks in consultation with the [Center for Civic Design](https://civicdesign.org), this front-end provides an interface for a voter to complete and print a ballot which, in an end-to-end verifiable use case, would be accompanied by a printed tracking ID. This BMD front-end is provided as one, potential implementation.
+Esto contiene una instancia de trabajo del dispositivo de marcado de boletas (BMD). Construido por VotingWorks en consulta con el [Centro de Diseño Cívico] (https://civicdesign.org), este front-end proporciona una interfaz para que un votante complete e imprima una boleta que, en un caso de uso verificable de extremo a extremo, iría acompañada de una identificación de rastreo impresa. Este front-end de BMD se proporciona como una, implementación potencial.
 
-[📁 Source](https://github.com/microsoft/electionguard-ballot-marking-device) - https://github.com/microsoft/electionguard-ballot-marking-device
+[📁 Fuente](https://github.com/microsoft/electionguard-ballot-marking-device) - https://github.com/microsoft/electionguard-ballot-marking-device
 
 
 ### Tracking Site
-An application that demonstrates publication of ElectionGuard election artifacts to a public website to enable verification ID lookup, downloadable zip files of the election result (for third-party verifiers), and election results summaries.
+Aplicación que demuestra la publicación de artefactos electorales de ElectionGuard en un sitio web público para permitir la búsqueda de ID de verificación, archivos zip descargables de los resultados de las elecciones (para verificadores de terceros) y resúmenes de los resultados de las elecciones.
 
-[📁 Source](https://github.com/microsoft/electionguard-tracking-site) - https://github.com/microsoft/electionguard-tracking-site
+[📁 Fuente](https://github.com/microsoft/electionguard-tracking-site) - https://github.com/microsoft/electionguard-tracking-site
 
-### Verifier
-The verifier application is used to perform an external, independent verification of an election tally. This repository contains a reference implementation of a verifier built against the ElectionGuard specifications. This is not meant to be the *only* verifier application, but rather an example. This library should be used in tandem with the technical specifications and usage guidelines contained in the [specifications](specs/readme).
+### Verificador
+La aplicación de verificación se utiliza para realizar una verificación externa e independiente de un recuento de elecciones. Este repositorio contiene una implementación de referencia de un verificador construido contra las especificaciones de ElectionGuard. No se trata de la aplicación de verificador *sólo*, sino más bien de un ejemplo. Esta biblioteca debe ser usada en conjunto con las especificaciones técnicas y las guías de uso contenidas en las [especificaciones](specs/readme).
 
-[📁 Source](https://github.com/microsoft/electionguard-verifier) - https://github.com/microsoft/electionguard-verifier
+[📁 Fuente](https://github.com/microsoft/electionguard-verifier) - https://github.com/microsoft/electionguard-verifier
 
 ### Web API
-This is an API that interacts with admin encrypter devices to perform ballot encryption, casting, spoiling, and tallying. This makes use of the C# Nuget package.
+Se trata de una API que interactúa con los dispositivos de encriptación de la administración para llevar a cabo la encriptación de las boletas, el casting, el deterioro y el recuento. Esto hace uso del paquete C# Nuget.
 
-[📁 Source](https://github.com/microsoft/electionguard-web-api) - https://github.com/microsoft/electionguard-web-api
+[📁 Fuente](https://github.com/microsoft/electionguard-web-api) - https://github.com/microsoft/electionguard-web-api
 
 
-## Security Issues Reporting
-We encourage the developer and security community to conduct research, report issues, and suggest improvements on this code base. However, unlike performance or feature bugs, please do **not** report security vulnerabilities in public Github comments. Each repository has a SECURITY file with instructions on responsibly reporting security vulnerabilities under Microsoft's CVD process.
+## Problemas de seguridad reportando
+Alentamos a la comunidad de desarrolladores y de seguridad a realizar investigaciones, informar sobre cuestiones y sugerir mejoras en este código base. Sin embargo, a diferencia de los errores de rendimiento o de características, por favor **no** informe de las vulnerabilidades de seguridad en los comentarios públicos de Github. Cada repositorio tiene un archivo de SEGURIDAD con instrucciones sobre cómo informar responsablemente de las vulnerabilidades de seguridad en el proceso de CVD de Microsoft.
 
- ## Contributing
-Help defend democracy and **[contribute to the project][]**.
+ ## Contribuyendo
+Ayude a defender la democracia y **[contribuya al proyecto][]**.
 
-[Code of Conduct]: CODE_OF_CONDUCT.md
-[Contribute to the project]: CONTRIBUTING.md
+[Código de Conducta]: CODE_OF_CONDUCT.md
+[Contribuir al proyecto]: CONTRIBUIR.md
 
-## Thanks! 🎉
-A huge thank you to those who helped to contribute to this project so far, including:
-* Josh Benaloh (whose [PhD thesis](https://www.microsoft.com/en-us/research/publication/verifiable-secret-ballot-elections/) was the genesis of much of this work)
+## ¡Gracias! 🎉
+Un enorme agradecimiento a los que han ayudado a contribuir a este proyecto hasta ahora, incluyendo:
+* Josh Benaloh (cuya [tesis doctoral](https://www.microsoft.com/en-us/research/publication/verifiable-secret-ballot-elections/) fue el génesis de gran parte de este trabajo)
 * [Galois](https://galois.com/) / [Free & Fair](https://freeandfair.us/)
 * [VotingWorks](https://voting.works/)
-* [Center for Civic Design](https://civicdesign.org/)
-* [Oxide Design](https://oxidedesign.com/)
-* [InfernoRed Technology](https://infernored.com/)
-* Many teams within Microsoft
- 
+* [Centro de Diseño Cívico](https://civicdesign.org/)
+* [Diseño de óxido](https://oxidedesign.com/)
+* [Tecnología InfernoRed](https://infernored.com/)
+* Muchos equipos dentro de Microsoft
