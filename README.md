@@ -29,7 +29,7 @@ Este es el núcleo del SDK que realiza funciones electorales como la encriptaci�
 ## Especificaciones y documentación
 Esta biblioteca contiene las especificaciones fundamentales, la documentación, la arquitectura y las pruebas matemáticas y criptográficas que sustentan a ElectionGuard. Si está buscando entender mejor el sistema, o quiere saber cómo integrar los diversos componentes, hay mucha información valiosa contenida aquí.
 
-[📄 Documentación y especificaciones](https://github.com/microsoft/electionguard/wiki)
+[📄 Documentación y especificaciones](https://github.com/jaouahbi/electionguard.wiki.es)
 
 ## Reference Implementation
 El resto del SDK de ElectionGuard consiste en una implementación de referencia dividida en varios repositorios separados. Estos repositorios, aunque están pensados para ser utilizados conjuntamente como componentes de una solución más amplia, también pueden ser independientes si los desarrolladores sólo desean investigar o implementar un componente.
